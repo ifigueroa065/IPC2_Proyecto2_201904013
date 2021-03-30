@@ -4,6 +4,9 @@ import tkinter.filedialog
 import tkinter as tk
 import xml.etree.ElementTree as ET
 
+def boto1():
+    print("mestoy ejecutando")
+
 
 def CREAR_INTERFAZ():
     def DIALOGO():
