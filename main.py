@@ -11,14 +11,18 @@ DATOS= ListaCircular()
 
 def CREAR_INTERFAZ():
     def OP1():
-        def  ROTH():
+        def  LOAD():
             name=desplegable.get()
             print("HOLA TOY ROTANDO")
             DATOS.buscar(name)
             imagen=PhotoImage(file="matrix.png")
             Label(op1,image=imagen).place(x=20,y=100).pack()
-            
-        
+        def ROTAR_IMG():    
+            name=desplegable.get()
+            print("HOLA TOY ROTANDO")
+            DATOS.buscar(name)
+            imagen=PhotoImage(file="matrix.png")
+            Label(op1,image=imagen).place(x=20,y=100).pack()
         L1=StringVar()
         op1=Toplevel()
 
@@ -33,8 +37,8 @@ def CREAR_INTERFAZ():
         desplegable.place(x=250,y=20)
         desplegable['values']=DATOS.NOMBRES()
 
-        Button(op1,text="ROTAR",command=ROTH,font="Helvetica 12",bg="gold").place(x=650, y=20)
-        Button(op1,text="CARGAR IMAGEN",command=ROTH,font="Helvetica 12",bg="gold").place(x=500, y=20)
+        Button(op1,text="ROTAR",command=ROTAR_IMG,font="Helvetica 12",bg="gold").place(x=650, y=20)
+        Button(op1,text="CARGAR IMAGEN",command=LOAD,font="Helvetica 12",bg="gold").place(x=500, y=20)
         op1.mainloop()
 
     def OP2():

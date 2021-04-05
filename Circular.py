@@ -62,6 +62,7 @@ class ListaCircular():
                 aux.imagen.mostrarLista()
                 aux.imagen.generar_img_original(aux.nombre,aux.filas,aux.columnas)
                 #aux.imagen.generar_img()
+                aux.imagen.mostrarLista_Horizontal()
                 break
             aux=aux.siguiente
             if aux==self.primero:

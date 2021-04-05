@@ -5,11 +5,11 @@
         <filas>5</filas>
         <columnas>10</columnas>
         <imagen>
-            ----------
+            *---------
             -***-***--
             -**--*-*--
             --**-*-*--
-            -***-***--
+            -***-***-*
         </imagen>
     </matriz>
     <matriz>
