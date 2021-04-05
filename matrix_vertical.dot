@@ -5,7 +5,7 @@ digraph G {
                 node [  shape = "box" ]
                 a0 [ label= <
                 <TABLE border="1" cellspacing= "1" cellpadding="5">
-                        <TR><TD border="2">M2</TD>
+                        <TR><TD border="2">M1</TD>
                                     <TD border="2">1</TD>
                                     
                                     
@@ -29,7 +29,15 @@ digraph G {
                                     
                                     <TD border="2">8</TD>
                                     
+                                    
+                                    <TD border="2">9</TD>
+                                    
+                                    
+                                    <TD border="2">10</TD>
+                                    
                                     </TR><TR><TD border="2">1</TD><TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
@@ -39,66 +47,102 @@ digraph G {
 <TD border="2"> </TD>
 </TR>
 <TR><TD border="2">2</TD><TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
 <TD border="2">*</TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
-<TD border="2"> </TD>
+<TD border="2">*</TD>
 <TD border="2">*</TD>
 <TD border="2"> </TD>
-<TD border="2">*</TD>
 </TR>
 <TR><TD border="2">3</TD><TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
-<TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
+<TD border="2"> </TD>
 <TD border="2"> </TD>
 </TR>
 <TR><TD border="2">4</TD><TD border="2"> </TD>
-<TD border="2">*</TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
+<TD border="2"> </TD>
 <TD border="2"> </TD>
 </TR>
 <TR><TD border="2">5</TD><TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
+<TD border="2">*</TD>
 <TD border="2"> </TD>
-<TD border="2"> </TD>
-<TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
 <TD border="2"> </TD>
 </TR>
 <TR><TD border="2">6</TD><TD border="2"> </TD>
-<TD border="2">*</TD>
-<TD border="2">*</TD>
-<TD border="2">*</TD>
 <TD border="2"> </TD>
 <TD border="2"> </TD>
-<TD border="2">*</TD>
-<TD border="2">*</TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
 </TR>
 <TR><TD border="2">7</TD><TD border="2"> </TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
 <TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
+<TD border="2">*</TD>
 <TD border="2"> </TD>
-<TD border="2">*</TD>
-<TD border="2">*</TD>
-<TD border="2">*</TD>
 </TR>
 <TR><TD border="2">8</TD><TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2">*</TD>
+<TD border="2"> </TD>
+</TR>
+<TR><TD border="2">9</TD><TD border="2"> </TD>
+<TD border="2"> </TD>
 <TD border="2">*</TD>
 <TD border="2">*</TD>
 <TD border="2">*</TD>
 <TD border="2"> </TD>
 <TD border="2">*</TD>
 <TD border="2">*</TD>
+<TD border="2">*</TD>
+<TD border="2"> </TD>
+</TR>
+<TR><TD border="2">10</TD><TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
+<TD border="2"> </TD>
 <TD border="2"> </TD>
 </TR>
 
