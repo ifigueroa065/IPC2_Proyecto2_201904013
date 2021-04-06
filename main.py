@@ -578,7 +578,7 @@ def CREAR_INTERFAZ():
         verd.mainloop()
 
     def ver_doct():
-        webbrowser.open_new_tab('ENUNCIADO.pdf')
+        webbrowser.open_new_tab('DOCUMENTACION.pdf')
 
     def DIALOGO():
         global DATOS,REPORTE
