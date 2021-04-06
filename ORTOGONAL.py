@@ -190,7 +190,7 @@ class lista_Ortogonal():
                 #print(aux.pix+ " fila:"+ str(contfila)+ " columna:"+ str(contcol))
                 if contcol==columna and contfila==fila:
                     #aqui inicio
-                    aux.pix="s"
+                    aux.pix="*"
                     cox+=1
                     img+=aux.pix
                     condicion=False
@@ -206,7 +206,7 @@ class lista_Ortogonal():
                     aux=aux.right
                     contcol+=1
                     if cox<No:
-                        aux.pix="s"
+                        aux.pix="*"
                         cox+=1
                         condicion=False
                     else:
@@ -225,8 +225,9 @@ class lista_Ortogonal():
                             aux=aux.left
             img+=aux.pix
             print(img)
+            return True
         else:
-            print("ahuevo errorcito")
+            return False
 
     def agregarLineaVertical(self,fila,columna,No):
         k=1
@@ -259,7 +260,7 @@ class lista_Ortogonal():
                 if contcol==columna  and contfila==fila:
                     #aqui inicio
                     if coy<=No:
-                        aux.pix="s"
+                        aux.pix="*"
                         img+=aux.pix
                         coy+=1
                         fila+=1
@@ -284,8 +285,9 @@ class lista_Ortogonal():
                             aux=aux.left
             img+=aux.pix
             print(img)
+            return True
         else:
-            print("ahuevo errorcito")
+            return False
 
     def limpiar_zona(self,xo,yo,x,y):
         k=1
@@ -342,8 +344,9 @@ class lista_Ortogonal():
                     node=node.right
                 nodo_inicial=nodo_inicial.bot
             self.mostrarLista()
+            return True
         else:
-            print("ahueevo errocito")
+            return False
         
     def agregar_rectangulo(self,xo,yo,a,b):
         k=1 #COLUMNAS
@@ -399,8 +402,9 @@ class lista_Ortogonal():
 
             #luego de agregar la  muestro     
             self.mostrarLista()
+            return True
         else:
-            print("pues no mi ciela")
+            return False
 
     def agregar_triangulo(self,xo,yo,lado):
         k=1 #COLUMNAS
@@ -455,8 +459,9 @@ class lista_Ortogonal():
                 nodo_aux.pix="*"
             #luego de agregar la  muestro     
             self.mostrarLista()
+            return True
         else:
-            print("pues no mi ciela")
+            return False
     
 
     def generar_img_original(self,name,fila,columna):
@@ -695,6 +700,66 @@ class lista_Ortogonal():
         print("        IMAGEN  SUCCESSFULLY             ")
         print("     **************************      ")
 
+    
+    def generar_img_Aaux(self,name,fila,columna):
+        with open("auxiliar.dot", mode="w",encoding="utf-8") as o:
+            o.write("""digraph G {\n 
+                subgraph cluster1 {\n 
+                node [  shape = \"box\" ]
+                a0 [ label= <
+                <TABLE border=\"1\" cellspacing= \"1\" cellpadding=\"5\">
+                        """)
+            i=1
+            j=0
+            
+            if j==0:
+                o.write("<TR>")
+                o.write("""<TD border=\"2\">"""+name+"""</TD>""")
+                while i<=int(columna):
+                    o.write("""
+                                    <TD border=\"2\">"""+str(i)+"""</TD>
+                                    
+                                    """)
+                    i+=1
+                i=1
+                o.write("</TR>")
+            k=1
+            aux=self.cabeza
+            o.write("<TR>")
+            o.write("""<TD border=\"2\">"""+str(k)+"""</TD>""")
+            while aux.bot !=None or aux.right!=None:
+                o.write("""<TD border=\"2\">"""+aux.pix+"""</TD>\n""")
+                if aux.right !=None:
+                    aux=aux.right
+                else:
+                    o.write("</TR>\n")
+                    k+=1
+                    o.write("<TR>")
+                    o.write("""<TD border=\"2\">"""+str(k)+"""</TD>""")
+                    #imprimo la fila que leí
+                    if aux.bot!=None:
+                        img=""
+                        aux=aux.bot
+                        while aux.left!=None:
+                            aux=aux.left
+            o.write("""<TD border=\"2\">"""+aux.pix+"""</TD>\n""")
+            o.write("</TR>\n")
+            img+=aux.pix
+            o.write("""
+                    
+                    </TABLE>>];\n
+
+                    }\n
+
+                    }\n"""); 
+               
+        os.system('dot -Tpng auxiliar.dot -o auxiliar.png');  
+        
+        print("     **************************      ")
+        print("        IMAGEN  SUCCESSFULLY             ")
+        print("     **************************      ")
+
+    
     def generar_img(self):
         with open("matrix.dot", mode="w",encoding="utf-8") as o:
             o.write("""digraph G {\n 
@@ -764,7 +829,7 @@ prueba.agregarNodo("#",4)
 prueba.agregarNodo("#",4)
 prueba.agregarNodo("#",4)
 
-prueba.mostrarLista()
+#prueba.mostrarLista()
 #prueba.mostrarLista_Horizontal()
 #prueba.mostrarLista_Vertical()
 #prueba.mostrarLista_Transpuesta()
@@ -772,4 +837,4 @@ prueba.mostrarLista()
 #prueba.agregarLineaVertical(1,4,3)
 #prueba.limpiar_zona(2,2,3,3)
 #prueba.agregar_rectangulo(1,1,4,2)
-prueba.agregar_triangulo(1,1,5)
+#prueba.agregar_triangulo(1,1,5)
